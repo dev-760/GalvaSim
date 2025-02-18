@@ -1,0 +1,5 @@
+git clone https://github.com/dev-760/GalvaSim.git
+cd GalvaSim
+pip install -r requirements.txt
+python main.py
+python GalvaSim.py
