@@ -1,0 +1,6 @@
+numpy
+matplotlib
+networkx
+rich
+dataclasses
+enum34
