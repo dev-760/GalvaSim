@@ -67,4 +67,4 @@ To use **GalvaSim** , ensure you have the following installed:
 
 ### Developer  🧑‍💻
 
-This project was developed by **[Hassan Karasu](https://github.com/dev-760)
+This project was developed by [Hassan Karasu](https://github.com/dev-760)
