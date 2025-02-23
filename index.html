@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalvaSim • Advanced Electrochemical Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-panel">
+            <img src="logo.png" alt="GalvaSim Logo" style="height: 50px; margin-bottom: 1rem;">
+            <h1>GalvaSim</h1>
+            <form id="galvaSimForm">
+                <div class="input-group">
+                    <label for="preset">Preset Configuration</label>
+                    <select id="preset" onchange="loadPreset(this.value)">
+                        <option value="">Custom Configuration</option>
+                        <option value="zinc_copper">Zinc-Copper Cell</option>
+                        <option value="silver_lead">Silver-Lead Cell</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="mode">Simulation Mode</label>
+                    <select id="mode" name="mode">
+                        <option value="1">High-Precision Manual Configuration</option>
+                        <option value="2">Automated Optimization Algorithm</option>
+                        <option value="3">Hybrid Analysis Mode</option>
+                    </select>
+                </div>
+
+                <button type="button" id="startBtn" class="scientific-button">Initialize Electrochemical Simulation</button>
+
+                <div id="inputParameters" style="display: none;">
+                    <div class="input-group">
+                        <label for="anode">Anode Material</label>
+                        <select id="anode" name="anode">
+                            <option value="Li">Li</option>
+                            <option value="K">K</option>
+                            <option value="Ca">Ca</option>
+                            <option value="Na">Na</option>
+                            <option value="Mg">Mg</option>
+                            <option value="Al">Al</option>
+                            <option value="Zn">Zn</option>
+                            <option value="Fe">Fe</option>
+                            <option value="Ni">Ni</option>
+                            <option value="Sn">Sn</option>
+                            <option value="Pb">Pb</option>
+                            <option value="H2">H2</option>
+                            <option value="Cu">Cu</option>
+                            <option value="Ag">Ag</option>
+                            <option value="Hg">Hg</option>
+                            <option value="Pt">Pt</option>
+                            <option value="Au">Au</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cathode">Cathode Material</label>
+                        <select id="cathode" name="cathode">
+                            <option value="Li">Li</option>
+                            <option value="K">K</option>
+                            <option value="Ca">Ca</option>
+                            <option value="Na">Na</option>
+                            <option value="Mg">Mg</option>
+                            <option value="Al">Al</option>
+                            <option value="Zn">Zn</option>
+                            <option value="Fe">Fe</option>
+                            <option value="Ni">Ni</option>
+                            <option value="Sn">Sn</option>
+                            <option value="Pb">Pb</option>
+                            <option value="H2">H2</option>
+                            <option value="Cu">Cu</option>
+                            <option value="Ag">Ag</option>
+                            <option value="Hg">Hg</option>
+                            <option value="Pt">Pt</option>
+                            <option value="Au">Au</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="conc_anode">Anode Concentration (M)</label>
+                        <input type="text" id="conc_anode" name="conc_anode" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="conc_cathode">Cathode Concentration (M)</label>
+                        <input type="text" id="conc_cathode" name="conc_cathode" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="moles_reactant">Moles of Reactant</label>
+                        <input type="text" id="moles_reactant" name="moles_reactant" required>
+                    </div>
+
+                    <button type="button" id="toggleEnvSettings">Environmental Settings</button>
+
+                    <div id="environmentalSettings" style="display: none;">
+                        <div class="input-group">
+                            <label for="temperature">Temperature (°C)</label>
+                            <input type="text" id="temperature" name="temperature" value="25">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="pressure">Pressure (atm)</label>
+                            <input type="text" id="pressure" name="pressure" value="1">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="solvent">Solvent</label>
+                            <select id="solvent" name="solvent">
+                                <option value="Water">Water</option>
+                                <option value="Methanol">Methanol</option>
+                                <option value="Ethanol">Ethanol</option>
+                                <option value="DMSO">DMSO</option>
+                                <option value="Acetonitrile">Acetonitrile</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="catalyst">Catalyst</label>
+                            <select id="catalyst" name="catalyst">
+                                <option value="">None</option>
+                                <option value="Platinum">Platinum</option>
+                                <option value="Palladium">Palladium</option>
+                                <option value="Nickel">Nickel</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ph">pH</label>
+                            <input type="text" id="ph" name="ph" value="7">
+                        </div>
+                    </div>
+
+                    <button type="submit">Calculate</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="visualization-panel">
+            <div id="results" class="fade-in"></div>
+            <canvas id="galvanicCellDiagram" width="800" height="400"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
