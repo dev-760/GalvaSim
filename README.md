@@ -2,13 +2,15 @@
 
 ## Overview 🌟
 
-**GalvaSim** is a tool designed to simulate how a galvanic (or electrochemical) cell behaves under different conditions. Whether you're a student learning about electrochemistry 📚 or a researcher needing a quick way to visualize and calculate electrochemical reactions 🧑‍🔬, this simulator can help you understand the processes behind these reactions, including how temperature 🌡️, pressure 💨, solvent 🧪, catalyst 📈, and pH 🧫 affect cell performance.
+**GalvaSim** is a tool designed to simulate how a galvanic (or electrochemical) cell behaves under different conditions. Whether you're a student learning about electrochemistry 📚 or a researcher needing a quick way to visualize and calculate electrochemical reactions 🧑‍�, this simulator can help you understand the processes behind these reactions, including how temperature 🌡️, pressure 💨, solvent 🧪, catalyst 📈, and pH 🧫 affect cell performance.
 
-The simulator uses several scientific Python libraries, making it a great resource for anyone working with scientific simulations. 
+The simulator uses several scientific Python libraries, making it a great resource for anyone working with scientific simulations.
+
+You can access the web app version at **[GalvaSim.tech](https://galvasim.tech)** 🛠️🚀
 
 ## Key Features 🔥
 
-### Input Modes ⌨️
+### Input Modes ⌘
 You can choose from three different modes depending on how much control you want over the simulation:
 
 - **Manual Mode:** You provide all the values, like electrode materials, concentrations, and moles of reactant.
@@ -38,33 +40,43 @@ The simulator calculates the cell potential using:
 - **Environmental Factors:** Temperature, pressure, and pH.
 - **Catalysts:** Improve reaction efficiency and cell potential.
 
-### Requirements 🧰
+## Requirements 🧐
 
-To use **GalvaSim** , ensure you have the following installed:
+To use **GalvaSim**, ensure you have the following installed:
 
 - **Python 3.x** (preferably 3.8 or later)
 - **pip** (Python package installer)
 
-### Installation 🛠️
+## Installation 🛠️
 
 1. Clone the repository:
 
    ```bash
    git clone https://github.com/yourgithubusername/GalvaSim.git
    cd GalvaSim
+   ```
 
 2. Install the required dependencies:
 
     ```bash
     pip install -r requirements.txt
+    ```
 
 3. Running the Simulator 🚀
 
     ```bash
     python3 galvasim.py
+    ```
 
 ---
 
-### Developer  🧑‍💻
+## Web App Version 🛠️🚀
 
-This project was developed by [Hassan Karasu](https://github.com/dev-760)
+Try the online version of GalvaSim at **[GalvaSim.tech](https://galvasim.tech)** for a more interactive experience.
+
+---
+
+### Developer 🧑‍💻
+
+This project was developed by [Hassan Karasu](https://github.com/dev-760).
+
